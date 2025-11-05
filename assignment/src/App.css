@@ -1,0 +1,79 @@
+body {
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #a8dadc 0%, #ffc0cb 100%);
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.wishlist-container h1 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.wish-form button {
+    background-color: #457b9d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.wish-form button:hover {
+    background-color: #1d3557;
+}
+
+.wishlist-container h1 {
+    color: #e63946; 
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.wish-item-price {
+    color: #06d6a0; 
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.wish-item-row {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-left: 5px solid #457b9d;
+    background-color: #f1faee;
+    transition: box-shadow 0.2s;
+}
+
+.wish-item-row:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wish-item-row.is-purchased {
+    border-left-color: #ccc;
+    background-color: #f8f8f8;
+    opacity: 0.7;
+}
+
+.is-purchased span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.wish-item-row span {
+    text-decoration: none;
+    color: black;
+}

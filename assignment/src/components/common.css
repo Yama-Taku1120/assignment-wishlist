@@ -1,0 +1,10 @@
+.title h1 {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.AddItems {
+  display: flex;
+  justify-content: center;
+}
