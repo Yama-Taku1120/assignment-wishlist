@@ -32,6 +32,11 @@ const WishList: React.FC = () => {
     );
   };
 
+  // アイテムを削除する関数
+  const deleteItem = (id: number) => {
+    setItems(prevItems => prevItems.filter(item => item.id !== id));
+  };
+
   return (
     <div className='wishlist-container'>
       <h1 className='title'>ほしいものリスト</h1>
@@ -41,10 +46,13 @@ const WishList: React.FC = () => {
           key={item.id}
           item={item}
           onToggle={togglePurchased}
+          onDelete={deleteItem}
         />
       ))}
     </div>
   );
 };
+
+
 
 export default WishList;

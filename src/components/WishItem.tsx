@@ -12,9 +12,10 @@ export type WishItemType = {
 interface WishItemProps {
     item: WishItemType;
     onToggle: (id: number) => void;
+    onDelete: (id: number) => void;
 }
 
-const WishItem: React.FC<WishItemProps> = ({ item, onToggle }) => {
+const WishItem: React.FC<WishItemProps> = ({ item, onToggle, onDelete }) => {
     const rowClassName = item.isPurchased
         ? 'wish-item-row is-purchased'
         : 'wish-item-row';
@@ -29,6 +30,14 @@ const WishItem: React.FC<WishItemProps> = ({ item, onToggle }) => {
             <span className="wish-item-price">
                 {item.name} - <span className="wish-item-price">¥{item.price.toLocaleString()}</span>
             </span>
+
+            <button 
+                className="delete-button"
+                onClick={() => onDelete(item.id)}
+            >
+                削除
+            </button>
+
         </div>
     );
 };
