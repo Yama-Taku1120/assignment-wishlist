@@ -20,14 +20,14 @@ const WishItem: React.FC<WishItemProps> = ({ item, onToggle }) => {
         : 'wish-item-row';
 
     return (
-        <div className={rowClassName} style={{ display: 'flex', alignItems: 'center', margin: '10px 0', justifyContent: 'center' }}>
+        <div className={rowClassName}>
             <input
                 type="checkbox"
                 checked={item.isPurchased}
                 onChange={() => onToggle(item.id)}
             />
             <span className="wish-item-price">
-                **{item.name}** - <span className="wish-item-price">¥{item.price.toLocaleString()}</span>
+                {item.name} - <span className="wish-item-price">¥{item.price.toLocaleString()}</span>
             </span>
         </div>
     );

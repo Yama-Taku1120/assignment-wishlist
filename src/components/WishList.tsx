@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import WishItem, { type WishItemType } from './WishItem.tsx';
 import WishForm from './WishForm.tsx';
-import './common.css'
 
 // test
 const initialList: WishItemType[] = [
