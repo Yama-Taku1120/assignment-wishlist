@@ -23,7 +23,7 @@ const WishForm: React.FC<WishFormProps> = ({ onAddItem }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+        <form className="forms" onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
         <input
             type="text"
             placeholder="ほしいものの名前"
